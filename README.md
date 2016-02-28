@@ -6,11 +6,10 @@ This document describes how to setup a Linux server to host a Python web applica
 1. IP address: [52.36.251.6][1]
 2. URL: [http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com][2]
 3. SSH port: 2200
-4. Password authentication is disabled on the sshd. Users must pass the private key to login the server through remote connections. 
 
 ## Installed sofwares
 
-The following packages were installed in the sequency of their order. 
+The following packages were installed sequencially. 
 
 ```
 apt-get git
