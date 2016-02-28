@@ -19,7 +19,6 @@ apt-get apache2-mod-wsgi
 apt-get postgresql
 apt-get git
 apt-get python pip
-pip Flask
 ```
 
 ## Additional Users and Groups
@@ -37,6 +36,22 @@ ufw allow 123
 ufw allow 2200
 ufw enable
 ```
+
+## PostgreSQL settings
+
+To create the user `catalog`, execute the following on the terminal
+
+```sudo -u postgres createuser -P -d catalog```
+
+To create the database `db_catalog` owned by `catalog`, execute the fllowing on the terminal
+
+```sudo -u postgres createdb -O catalog db_catalog```
+
+To enter the psql shell for the database `db_catalog`, execute the following 
+
+```psql -h localhost -U catalog -d db_catalog```
+
+To get help for psql, type `help` on the psql shell. 
 
 [1]:http://52.36.251.6
 [2]:http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
