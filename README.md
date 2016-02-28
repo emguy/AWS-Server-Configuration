@@ -41,15 +41,21 @@ ufw enable
 
 To create the user `catalog`, execute the following on the terminal
 
-```sudo -u postgres createuser -P -d catalog```
+```
+sudo -u postgres createuser -P -d catalog
+```
 
 To create the database `db_catalog` owned by `catalog`, execute the fllowing on the terminal
 
-```sudo -u postgres createdb -O catalog db_catalog```
+```
+sudo -u postgres createdb -O catalog db_catalog
+```
 
 To enter the psql shell for the database `db_catalog`, execute the following 
 
-```psql -h localhost -U catalog -d db_catalog```
+```
+psql -h localhost -U catalog -d db_catalog
+```
 
 To get help for psql, type `help` on the psql shell. 
 
