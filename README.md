@@ -38,6 +38,7 @@ ufw allow 2200
 ufw enable
 ```
 
-
+[1]:52.36.251.6
+[2]:http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
 
 
