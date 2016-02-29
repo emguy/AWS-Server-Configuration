@@ -1,6 +1,6 @@
 # AWS-Server-Configuration
 
-This document describes how to setup a Linux server to host a Python web application. 
+This document describes how to setup a Linux server to host a Python web application using flask and PostgreSQL. 
 
 ## Summary
 1. IP address: [52.36.251.6][1]
@@ -59,7 +59,7 @@ To get help for psql, type `help` on the psql shell.
 
 ## Setup Apache server
 Create the directory `/var/www/catalog/` and then the file `/var/www/catalog/entry.wsgi` with the following content
-```
+```python
 def application(environ, start_response):
   status = '200 OK'
   output = 'Hello World!'
@@ -132,7 +132,7 @@ We first fetch the source of `Item-Catalog` from the github using:
 git clone https://github.com/emguy/Item-Catalog.git src/
 ```
 Replace the entire content of the file `/var/www/catalog/entry.wsgi` with the following
-```
+```python
 #!/usr/bin/python
 activate_this = "/var/www/catalog/venv/bin/activate_this.py"
 execfile(activate_this, dict(__file__=activate_this))
@@ -152,6 +152,10 @@ http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
 ```
 ```
 http://52.36.251.6
+```
+Restart Apache with the following command to apply new changes.
+```
+service apache2 restart
 ```
 
 [1]:http://52.36.251.6
