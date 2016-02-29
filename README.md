@@ -160,7 +160,13 @@ Restart Apache with the following command to apply new changes.
 service apache2 restart
 ```
 
+## Third party resources
+1. [SQLAlchemy 1.1 Documentation][3]
+2. [How To Deploy a Flask Application on an Ubuntu VPS][4]
+
 [1]:http://52.36.251.6
 [2]:http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
+[3]:http://docs.sqlalchemy.org/en/latest/dialects/postgresql.html#module-sqlalchemy.dialects.postgresql.psycopg2
+[4]:https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
 
