@@ -1,4 +1,4 @@
-# AWS-Server-Configuration
+# AWS Server Configuration Guide
 
 This document describes how to setup a Linux server to host a Python web application using flask and PostgreSQL. 
 
