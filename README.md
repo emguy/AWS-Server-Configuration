@@ -37,19 +37,19 @@ ufw enable
 
 ## PostgreSQL settings
 
-To create the user `catalog`, execute the following on the terminal
+To create the user `catalog`, execute the following command on the terminal.
 
 ```
 sudo -u postgres createuser -P -d catalog
 ```
 
-To create the database `db_catalog` owned by `catalog`, execute the fllowing on the terminal
+To create the database `db_catalog` owned by `catalog`, execute the following command on the terminal.
 
 ```
 sudo -u postgres createdb -O catalog db_catalog
 ```
 
-To enter the psql shell for the database `db_catalog`, execute the following 
+To enter the psql shell for the database `db_catalog`, execute the following command.
 
 ```
 psql -h localhost -U catalog -d db_catalog
@@ -58,7 +58,7 @@ psql -h localhost -U catalog -d db_catalog
 To get help for psql, type `help` on the psql shell. 
 
 ## Setup Apache server
-Create the directory `/var/www/catalog/` and then the file `/var/www/catalog/entry.wsgi` with the following content
+Create the directory `/var/www/catalog/` and then the file `/var/www/catalog/entry.wsgi` with the following content.
 ```python
 def application(environ, start_response):
   status = '200 OK'
@@ -94,7 +94,7 @@ Deactivate the default website and enable the new website with the following com
 a2dissite 000-default
 a2ensite catalog
 ```
-Restart Apache with the following command to apply the changes:
+Restart Apache with the following command to apply the changes.
 ```
 service apache2 restart
 ```
@@ -109,11 +109,11 @@ From this directory, we create an temporary Python environment using:
 ```
 virtualenv venv # (venv is the name of the user's choice)
 ```
-Now, we active the virtual environment with the following command:
+Now, we active the virtual environment with the following command.
 ```
 source venv/bin/activate
 ```
-From here, we install the following python packages:
+From here, we install the following python packages.
 ```
 pip install flask
 pip install sqlalchemy
@@ -121,7 +121,7 @@ pip install psycopg2
 pip install oauth2client
 pip install httplib2
 ```
-To deactivate the virtual environment `venv`, using the following command
+To deactivate the virtual environment `venv`, using the following command.
 ```
 deactivate
 ```
@@ -131,7 +131,7 @@ We first fetch the source of `Item-Catalog` from the github using:
 ```
 git clone https://github.com/emguy/Item-Catalog.git src/
 ```
-Replace the entire content of the file `/var/www/catalog/entry.wsgi` with the following
+Replace the entire content of the file `/var/www/catalog/entry.wsgi` with the following content.
 ```python
 #!/usr/bin/python
 activate_this = "/var/www/catalog/venv/bin/activate_this.py"
@@ -146,7 +146,7 @@ from src.web_server import app as application
 application.secret_key = "Add your secret key"
 application.debug = True
 ```
-Add the following two URLs to the respective application in the google developers console
+Add the following two URLs to the respective application in the google developers console.
 ```
 http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
 ```
