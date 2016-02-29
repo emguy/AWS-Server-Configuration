@@ -70,7 +70,7 @@ def application(environ, start_response):
   return [output]
 ```
 Create `catalog.conf` in `/etc/apache2/sites-available/` with the following content.
-```
+```xml
 <VirtualHost *:80>
   WSGIScriptAlias / /var/www/catalog/entry.wsgi
   <Directory /var/www/catalog/src/>
