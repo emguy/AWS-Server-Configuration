@@ -154,6 +154,7 @@ http://ec2-52-36-251-6.us-west-2.compute.amazonaws.com
 http://52.36.251.6
 ```
 Download the client secret file from google developers console. Rename the file to `client-secrets.json` and place it in the directory `/var/www/catalog/`.
+
 Restart Apache with the following command to apply new changes.
 ```
 service apache2 restart
