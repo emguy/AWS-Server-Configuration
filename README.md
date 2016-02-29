@@ -12,12 +12,11 @@ This document describes how to setup a Linux server to host a Python web applica
 The following packages were installed sequencially. 
 
 ```
-apt-get git
-apt-get apache2
-apt-get libapache2-mod-wsgi
-apt-get postgresql
-apt-get git
-apt-get python pip
+apt-get install apache2
+apt-get install libapache2-mod-wsgi
+apt-get install postgresql
+apt-get install git
+apt-get install python pip
 ```
 We also need `virtualenv` installed. 
 ```
